@@ -1,11 +1,14 @@
 <?php
-class Drag extends CI_Controller(){
+class Drag extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
-		$this->
+		$this->load->model('user');
 	}
-	public show(){
-		$this->load->view('drag');
+	public function show(){
+		$data['query']=$this->user->show_detail();
+
+		$this->load->view('drag',$data);
+
 	}
 }
 ?>
