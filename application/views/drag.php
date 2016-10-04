@@ -11,20 +11,33 @@
   <script>
   $( function() {
     $( "#sortable" ).sortable({
-    	stop: function(event, ui) {
-        	$("#rearrange").html("<p>The new position is"+ui.item.index()+"</p>");
+    	// stop: function(event, ui) {
+        	
+    	// }
+    	update: function (event, ui) {
+    		$("#rearrange").html("<p>Name:"+ui.item.html()+"Position:"+eval(ui.item.index()+"+1")+"</p>");
+	        var data = $(this).sortable('serialize');
+	        // POST to server using $.post or $.ajax
+	        
+	        alert(data.toSource());
+	        $.ajax({
+	            data: data,
+	            type: 'POST',
+	            url: 'update'
+	        });
     	}
-	});
+     });
     $( "#sortable" ).disableSelection();
-  } );
+  });
   </script>
+ 
 </head>
 <body>
-	<ul id="sortable">
-		<?php $i=0;	?>
-		<?php foreach($query as $user){
+	<ul id="sortable" style="list-style-type:none">
+		<?php $i=0;	
+		foreach($query as $user){
 			$i=$i+1;
-			echo "<li class='text' id='".$i."'>".$i.".".$user->firstname."<br></li>";
+			echo "<li class='text' id='item-".$user->firstname."'>".$user->firstname."<br></li>";
 		}?>
 	</ul>
 	<div id="rearrange">
