@@ -16,8 +16,10 @@ class Drag extends CI_Controller{
 
 //		$this->db->insert('Persons', $data);
 		foreach ($_POST['item'] as $value) {
-
-	    // Execute statement:
+			$this->db->set('id',$i,FALSE);
+			$this->db->where('firstname',$value);
+			$this->db->update('Persons');
+			$i++;
 	    // UPDATE [Table] SET [Position] = $i WHERE [EntityId] = $value
 	    //  $i++;
 		}
