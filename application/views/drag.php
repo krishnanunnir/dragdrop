@@ -19,7 +19,7 @@
 	        var data = $(this).sortable('serialize');
 	        // POST to server using $.post or $.ajax
 	        
-	        alert(data.toSource());
+	        //alert(data.toSource());
 	        $.ajax({
 	            data: data,
 	            type: 'POST',
