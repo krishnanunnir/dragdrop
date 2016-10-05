@@ -1,11 +1,7 @@
 <html>
 <head>
 	<style>
-	/*	li{
-			border: 1px solid black;
-			padding: 10px 10px 10px  10px;
-		}
-*/	</style>
+	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
