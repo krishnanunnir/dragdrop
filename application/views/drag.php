@@ -1,6 +1,28 @@
 <html>
 <head>
+
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
 	<style>
+		li{
+			border: 1px solid #f47e7e;
+			width:150px;
+			color:#f4f4f4;
+			background-color:#f47e7e;
+			border-radius: 2px;
+			text-align:center;
+			margin-top:5px;
+			margin-bottom: 5px;
+			padding-top:5px;
+			padding-bottom:5px;
+			font-family: 'Slabo 27px', serif;
+			font-size: 16px;
+			/*font-weight:;*/
+
+ 
+		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
